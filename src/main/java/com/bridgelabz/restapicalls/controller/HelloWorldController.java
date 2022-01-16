@@ -30,7 +30,7 @@ public class HelloWorldController {
     //      "http://localhost:8080/hello/post" -w "\n"
     @PostMapping("/post")
     public String sayHello(@RequestBody User user) {
-        return "Hello " + user.getFirstName() + " " + user.getLastName() + "!";
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + "!"+"!";
     }
 
     //curl -X PUT localhost:8080/hello/put/Sonali?firstName=Sonali&lastName=Gadge -w "\n"
