@@ -6,5 +6,12 @@ pipeline {
         echo 'Placeholder.'
       }
     }
+
+    stage ('next step') {
+      steps {
+        echo 'next step.'
+      }
+    }
+
   }
 }
