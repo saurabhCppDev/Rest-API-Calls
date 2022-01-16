@@ -22,7 +22,7 @@ public class HelloWorldController {
     //curl localhost:8080/hello/param/Sonali -w "\n"
     @GetMapping("/param/{name}")
     public String sayHelloParam(@PathVariable String name) {
-        return "Hello " + name + "!";
+        return "Hello " + name + "!" + "!";
     }
 
     //curl -X POST -H "Content-Type: application/json"
