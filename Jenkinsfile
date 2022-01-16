@@ -1,14 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage ('Initialize') {
+    stage ('version') {
       steps {
-        echo 'Placeholder.'
+        echo 'mvn --version.'
       }
     }
 	stage ('compile') {
       steps {
         bat 'mvn compile'
+      }
+    }
+
+	stage ('test') {
+      steps {
+        bat 'mvn test'
+      }
+    }
+
+	stage ('package') {
+      steps {
+        bat 'mvn package'
       }
     }
 
